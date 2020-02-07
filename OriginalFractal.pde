@@ -9,17 +9,14 @@ public void draw()
   myFractal(100,255,500-(100/2)-10, 0);
 }
 
+//rotation is whether or not the square has a face torward the ground (0) or a point torward the ground (1)
+//orientation is where the next squares will be drawn 
 public void myFractal(float size, float x, float y, int rotation)
 {
 	stroke(255);
 	noFill();
-	if(size<1&&rotation==0)
+	if(size<3)
 	{	
-		quad(x-(size/2),y+(size/2) , x+(size/2),y+(size/2) , x+(size/2),y-(size/2) , x-(size/2),y-(size/2));
-	}
-	else if(size<10&&rotation==1)
-	{
-		quad(x,y+(size*(float)Math.sqrt(2)/2) , x+(size*(float)Math.sqrt(2)/2),y , x,y-(size*(float)Math.sqrt(2)/2) , x-(size*(float)Math.sqrt(2)/2),y);
 	}
 	else
 	{
